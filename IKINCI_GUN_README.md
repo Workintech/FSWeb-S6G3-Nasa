@@ -1,4 +1,3 @@
-
 # NASA APOD Bölüm II - Üst seviye stilleme teknikleri
 
 Bu projede dün yaptığın uygulamanın stillerini yeniden elden geçireceksin. Stilleri şuradan indirerek kullanacaksın[Stillenmş Bileşenler](https://github.com/Workintech/FSWeb-S6G3-Nasa.git), ve de Reactstrap'ın bir veya iki bileşeninden kullanacaksın [Reactstrap](https://reactstrap.github.io/).
@@ -28,8 +27,6 @@ Bu ödev daha önce yaptığınız ödevin devamıdır.
 MVP'ye ulaşılana ve son bir commit yapılana kadar ek görevleri denemeyin.
 
 - [ ] Reactstrap yerine MaterialUI kullanmak için ya da styled-components yerine Emotion kullanmak için dökümanları inceleyin ve projenizde kullanın.
-- [ ] tailwind css yi deneyin. Uygulamanızda başlatmak biraz zor ama çok hızlı bir şekilde popülerlik kazanan harika bir kitaplık. Dökümanlar burada: [docs](https://tailwindcss.com/), ve burada React içinde nasıl kullanacağına dair bir başlangıç makalesi var: [makale](https://medium.com/@pipecork/using-tailwind-in-react-quickstart-4b06c10317b5)  (yazarı [Max David](https://medium.com/@pipecork)).
-
-
+- [ ] tailwind css yi deneyin. Uygulamanızda başlatmak biraz zor ama çok hızlı bir şekilde popülerlik kazanan harika bir kitaplık. Dökümanlar burada: [docs](https://tailwindcss.com/), ve burada React içinde nasıl kullanacağına dair bir başlangıç makalesi var: [makale](https://medium.com/@pipecork/using-tailwind-in-react-quickstart-4b06c10317b5) (yazarı [Max David](https://medium.com/@pipecork)).
 
 ## Bölüm I - [Component Side Effects](README.md)
