@@ -1,14 +1,13 @@
-# Gün Projesi: Component Side Effects - NASA APOD
+# Gün Projesi: Component useEffect - NASA APOD
 
-Bu iki aşamalı bir proje olacaktır. 
-Bu projede NASA API yi kullanarak "Astronomy Photo Of The Day" (Günün Astronomi Fotosu) nu çağıracaksın. Önce datayı çağıracaksın, arayüzünüzde kullanmak üzere bu data parçalarını kullanarak bir kaç bileşen oluşturacaksın. 2. aşamada ise ([İKİNCİ_GÜN_README.md](IKINCI_GUN_README.md) dosyasının içinde) uygulamanızı Stillenmiş Bileşenler kullanarak düzenleyeceksin [Stillenmiş Bileşenler](https://github.com/Workintech/FSWeb-S6G3-Nasa.git).
+Bu iki aşamalı bir proje olacaktır.
+Bu projede NASA API yi kullanarak "Astronomy Photo Of The Day" (Günün Astronomi Fotosu) nu çağıracaksın. Önce datayı çağıracaksın, arayüzünüzde kullanmak üzere bu data parçalarını kullanarak bir kaç bileşen oluşturacaksın. Projenin ikinci günün de de ([Gelişmiş Görselleştirme Teknikleri](https://github.com/Workintech/FSWeb-S6G4-Nasa-II/blob/main/README.md)), uygulamanın stillerini yeniden elden geçireceksin. Bunu yaparken tekrar olması için, standart CSS özellikleriyle, [flex](https://developer.mozilla.org/en-US/docs/Web/CSS/flex) gibi yeteneklere odaklanarak ilerleyebilirsin.
 
 ## Talimatlar
 
 ---
 
 Bu talimatları dikkatlice okuyun. Sizden neler beklendiğini iyice anladıktan sonra uygulamaya başlayın.
-
 
 ## Giriş
 
@@ -35,31 +34,30 @@ Bu proje, create-react-app (CRA) kullanılarak bir araya getirildi. Bu projenin 
 
 **Planlama**
 
-- [ ] Eğer istersen, basit bir dizayn oluşturmanın tam zamanıdır (kaynak ve örnekler için bakınız: ["simple wireframes"](https://www.google.com/search?q=simple+wireframes&tbm=isch)). **Bir kalem ve kağıt genellikle planlamanıza başlamanın en hızlı yoludur.**
-- [ ] Aklında bir tasarım planı oluşturduğunda, tasarımları tek tek bileşenlere ayır.
-- [ ] Hangi bileşenlerin stateleri tutacağını, her birinin hangi veriler için hangi proplara ihtiyaç duyduğunu (varsa) ve verileri nereden alacağını planlayın.
-- [ ] Şimdi koda atlama zamanı!
+- [ ] Eğer istersen, tasarıma uğraşmadan, basit bir taslak oluşturabilirsin. (kaynak ve örnekler için: ["simple wireframes"](https://www.google.com/search?q=simple+wireframes&tbm=isch)). **Bir kalem ve kağıt, planlamaya başlamanın en hızlı yoludur.**
+- [ ] Aklında bir tasarım planı oluşturduğunda, tek tek bileşenlere ayır.
+- [ ] Hangi bileşenlerin stateleri tutacağını, her birinin hangi veriler için hangi proplara ihtiyaç duyduğunu (varsa) ve verileri nereden alacağını planla.
+- [ ] Şimdi koda geçme zamanı!
 
 **Dosya yapısı**
 
-- [ ] Planladığın bileşenlere bir göz at. Her bileşen için ihtiyacın olan klasörleri ve dosyaları oluştur.
-- [ ] Şimdilik çoğunu boş bırakın - bunları gerçekten inşa etmeden önce verileri API'den alman gerekir.
+- [ ] Planladığın bileşenlere yapısal bir gözle de bak. Her bileşen için ihtiyacın olan klasörleri ve dosyaları oluştur.
+- [ ] İlk önce statik HTML ile başlayıp, içerikteki dinamik datayı istersen statik bırak. Bunları axios gerçekten başlamadan önce ekranda nasıl göreceğini planla, sonra API'den alarak ilerleyebilirsin.
 
 **Verileri Çekme**
 
-- [ ] `App.js` (veya her nerede isterseniz), NASA'dan alacağın verileri bir state'e ekleyin.
-- [ ] API çağrısını işlemek için bir effect hook ekleyin
-- [ ] [NASA APOD API docs](https://api.nasa.gov/#apod) NASA APOD API dökümanlarına gidin, dökümanları okuyarak
-API çağrısını nasıl oluşturacağını öğre.
-- [ ] Bir API keye ihtiyacınız _yok_. Ancak, API istek sınırlarını aşarsan bir API keye ihtiyacın olabilir.
-- [ ] Dökümanlarda anlatılan API uç noktasından(endpoint) `axios` kullanarak verileri çekin.
-- [ ] `.then()` metodunuzda `console.log` ile çekilen verinin içeriğini iyice inceleyin. 😃
-- [ ] Verinizi state e eklemeden önce, effect hookunuzun bağımlı bir diziye sahip olduğuna emin olun (muhtemelen boş, çünkü bu efektin herhangi bir state/prop ile senkronize edilmesini istemiyoruz), aksi halde **sonsuz bir döngü başlatırsınız ve DEMO_KEY'in API hız limitlerini aşarsınız ve gerçek bir API_KEY kullanmanız gerekir.**
+- [ ] `App.js` (veya her nerede istersen), NASA'dan alacağın verileri bir state'e ekle.
+- [ ] API çağrısını işlemek için, bir kez çalışan useEffect hook ekle.
+- [ ] [NASA APOD API docs](https://api.nasa.gov/#apod) NASA APOD API dökümanlarına git, dökümanları okuyarak API çağrısını nasıl oluşturacağını öğren.
+- [ ] Bir API keye ihtiyacın başta _yok_. Ancak, API kullanma sınırlarını aşarsan bir API keye ihtiyacın olabilir.
+- [ ] Koda geçmeden önce [Postman](https://www.postman.com/downloads/) bilgisayarına indirip, bağlantıları, ve gelen yanıtları test edebilirsin.
+- [ ] Dökümanlarda anlatılan API uç noktasından(endpoint) `axios` kullanarak verileri çek.
+- [ ] `.then()` metodunuzda `console.log` ile çekilen verinin içeriğini iyice incele. 😃
+- [ ] Verinizi state e eklemeden önce, effect hookunuzun peşinde bir dizi olduğuna emin olun (muhtemelen boş, çünkü bu efektin herhangi bir state/prop ile senkronize edilmesini istemiyoruz), aksi halde **sonsuz bir döngü başlatırsınız ve DEMO_KEY'in API hız limitlerini aşarsınız ve gerçek bir API_KEY kullanmanız gerekir.**
 
 DEMO KEY kullanım limitleri:
 
 > Saatlik Limit: Her IP her saat için 30 request atabilir
-
 > Günlük Limit: Her IP her gün yalnızca 50 request atabilir
 
 _Not: eğer photo url bir fotoğraf değilse, React applicationında bir video nasıl gösterilir kendiniz öğrenmeniz gerekli, YA DA aynı uç noktadan farklı tarihli bir APOD çekebilirsin, sorgunuza şu şekilde eklemen gerekli: `&date=2012-03-14`_
@@ -73,8 +71,8 @@ _Not: eğer photo url bir fotoğraf değilse, React applicationında bir video n
 
 #### _MUÜ (MVP) Gereklilikleri:_
 
-- [ ] Bileşen eklendiğinde APOD verisini çekmek için effect hook kullanın.
-- [ ] Kullanıcı arabiriminizi(UI) oluşturmak için bir araya getirilmiş farklı bileşenlerde APOD verilerini görüntüleyin.
+- [ ] Bileşen eklendiğinde APOD verisini çekmek için useEffect hooku kullan.
+- [ ] Kullanıcı arabiriminizi(UI) oluşturmak için basitçe bir araya getirilmiş farklı bileşenlerde APOD verilerini görüntüle.
 
 #### Pro İpuçları
 
@@ -85,22 +83,20 @@ _Not: eğer photo url bir fotoğraf değilse, React applicationında bir video n
 if (!props.photoOfTheDay) return <h3>Yükleniyor...</h3>;
 
 // Veriler alındıktan sonra bileşeninizi normal şekilde görüntüleyin
-return (
-  {/* JSX'leriniz buraya */}
-);
+return {
+  /* JSX'leriniz buraya */
+};
 ```
 
 - API dökümanlarını dikkatlice okuyun. Bir geliştirici olarak birçok teknik belgeyi okuyacaksın, bu yüzden bunları anlamaya çalışmak için bu proje güzel bir pratik olacak.
 
 ### Görev 3: Ekler
 
-MVP'ye ulaşılana ve son bir commit yapılana kadar ek görevleri denemeyin..
+MVP'ye ulaşılana ve son bir commit yapılana kadar ek görevleri denemeyin...
 
 - [ ] Opsiyonel bir `date` parametresi var dikkat ettin mi? Başka tarihe ait APOD'u çekmek için URL'de bunu şu şekilde tanımlayabilirsin `https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2012-03-14`. Başka tarihe ait APOD'ları görebilmek için bir dropdown ekleyin. Bu biraz zahmetli olacak, ancak uygulamanda biraz daha karmaşık mantık ve etkileşimden geçmek harika bir alıştırma olacak. Bu aynı zamanda çok yaygın bir kullanım türüdür, bu yüzden bunu denemen senin için faydalı olur
 - [ ] Aynı web sitesinde listelenen NASA'nın diğer API'lerinden birini kullanan başka bir uygulama yapın
 
+---
 
-
-----
-
-## Bölüm II - [Üst seviye stilleme teknikleri](İKİNCİ_GÜN_README.md)
+## Bölüm II (Yarının Projesi) - [Gelişmiş Görselleştirme Teknikleri](https://github.com/Workintech/FSWeb-S6G4-Nasa-II/blob/main/README.md)
